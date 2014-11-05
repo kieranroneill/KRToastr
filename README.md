@@ -10,17 +10,24 @@ A lightweight view that allows a customisable toast-like message to appear.
 
 ## Usage
 
-There are three static methods to use show the toast message. The two `[KRToastr showToastrMessageWithImage:]` methods are convenience methods that display the KRToastr view with default attributes, aside from the those specified in the parameters.
+There are three static methods to use show the toast message, all three methods require a `UIViewController` in order to attach it's self to a view.
+
+The two `[KRToastr showToastrMessageWithImage:]` methods (one with an image, one without) are convenience methods that display the KRToastr view with default attributes, aside from the attributes specified in the parameters.
 
 ```objective-c
-[KRToastr showToastrMessageWithImage:self image:[UIImage imageNamed:@"alert_icon"] message:@"This is a Toastr with an image" length:kToastrLengthShort completion:nil];
+[KRToastr showToastrMessageWithImage:self 
+  image:[UIImage imageNamed:@"alert_icon"] 
+  message:@"This is a Toastr with an image" 
+  length:kToastrLengthShort 
+  completion:nil];
 ```
 For extended customisation of the view, the method `[KRToastr initialiseWithViewController:]` returns an initialised view that can have it's attributes changed before it is displayed. To display the KRToastr view simply use `[KRToastr show:]`.
 
 ```objective-c
 KRToastr* toastr = [KRToastr initialiseWithViewController:self];
 
-// Edit the attributes.
+// Configure the attributes.
+toastr.image = [UIImage imageNamed:@"alert_icon"];
 toastr.message = @"This is a Toastr message.";
 toastr.textColour = [UIColor blackColor];
 toastr.backgroundColour = [UIColor redColor];
