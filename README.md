@@ -3,6 +3,8 @@ KRToastr
 
 A lightweight view that displays a customisable toast-like message for iOS.
 
+![Screenshot](/screenshots/krtoastr_screenshot.png?raw=true)
+
 ## Installation
 
 1. Simply add the `KRToastr.h` and `KRToastr.m` source files to your project.
