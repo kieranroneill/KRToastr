@@ -1,7 +1,7 @@
 KRToastr
 ========
 
-A lightweight view that allows a customisable toast-like message to appear.
+A lightweight view that displays a customisable toast-like message for iOS.
 
 ## Installation
 
